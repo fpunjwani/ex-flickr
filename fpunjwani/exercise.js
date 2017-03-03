@@ -29,6 +29,12 @@ exercise.addPhotos = function(data){
 };
 
 exercise.buildHtmlForImages = function(data){
+    var imageTags;
+    data.photos.photo.forEach(function(element) {
+        imageTags+='<img src="' + element.url_s+'">';
+    });
+    return imageTags;
+    
 
     // ------------------------------------------------
     //   YOUR CODE
